@@ -7,9 +7,12 @@ namespace Models.models
 {
     public class Category
     {
+        #region Id
+        [Key]
         public int Id { get; set; }
-        #region
-        [Required(ErrorMessage ="Esse campo é obrigatório!")]
+        #endregion
+        #region Title
+        [Required(ErrorMessage ="Campo título é obrigatório!")]
         [MaxLength(60, ErrorMessage = "Esse campo deve conter entre 3 e 60 caracteres")]
         [MinLength(3, ErrorMessage = "Esse campo de conter entre 3 e 60 caracteres")]
         public string Title { get; set; }
